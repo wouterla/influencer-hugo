@@ -340,15 +340,28 @@
       </div>
     </div>
     {{ end }}
-    <div class="row">
+    <!-- <div class="row">
       {{ range first 3 (where .Site.RegularPages "Type" "post")}}
       <div class="col-lg-4 col-md-6 col-sm-6">
       {{ .Render "post"}}
       </div>
       {{ end }}
+    </div> -->
+    <div class="row">
+      {{ range .external_posts }}
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="book-item mb-4 mb-lg-0">
+          <a href="{{ .link | safeURL }}" class="hover-item">
+            <img src="{{ .image | relURL }}" alt="" class="img-fluid">
+            <p>{{ .title | markdownify }}</p>
+            <i class="ti-link"></i>
+          </a>
+        </div>
+      </div>
+      {{ end }}
     </div>
     <div class="text-center mt-5">
-      <a href="/blog" class="btn btn-main">All Post</a>
+      <a href="/blog" class="btn btn-main">All Posts</a>
     </div>
   </div>
 </section>
