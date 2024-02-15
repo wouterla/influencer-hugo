@@ -253,7 +253,7 @@
       <div class="col-lg-6">
         <div class="author-info pl-4 mt-5 mt-lg-0">
           <h2 class="text-lg">{{ .name }}</h2>
-          <p class="mb-4 lead">- {{ .designation }}</p>
+          <p class="mb-4 lead">{{ .designation }}</p>
           {{ .content | markdownify }}
 
           {{ if .signature }}
