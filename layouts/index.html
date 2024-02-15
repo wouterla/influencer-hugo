@@ -12,7 +12,7 @@
           <h1 class="mb-3 mt-2">{{ .title | markdownify }}</h1>
 
           <div class="mb-4">
-            <h4>Price :- <span class="text-color">${{ .price }}</span></h4>
+            <h4>Price :- <span class="text-color">{{ .price }}</span></h4>
           </div>
           <p class="mb-4">{{ .content | markdownify }}</p>
           <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
