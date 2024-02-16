@@ -12,7 +12,7 @@
   {{ hugo.Generator }}
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="{{ .Site.Baseurl }}" />
+  <meta property="og:url" content="{{ .Site.Params.url }}" />
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="{{ .Site.Title }}"/>
   <meta property="og:description" content="{{ .Site.Params.description }}"/>
@@ -29,7 +29,7 @@
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta property="twitter:domain" content="{{ .Site.Params.domain | safeHTML }}"/>
-  <meta property="twitter:url" content="{{ .Site.baseurl }}"/>
+  <meta property="twitter:url" content="{{ .Site.Params.url }}"/>
   <meta name="twitter:title" content="{{ .Site.Title }}"/>
   <meta name="twitter:description" content="{{ .Site.Params.description }}"/>
 
