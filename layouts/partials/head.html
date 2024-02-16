@@ -11,6 +11,27 @@
   <meta name="theme-name" content="influencer-hugo" />
   {{ hugo.Generator }}
 
+<!-- HTML Meta Tags -->
+<!-- <title>Escaping Legacy</title>
+<meta name="description" content="Get the book: The Product Owner's Guide To Escaping Legacy">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://escapinglegacy.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Escaping Legacy">
+<meta property="og:description" content="Get the book: The Product Owner's Guide To Escaping Legacy">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/9deb8ff0-e7d0-4008-a429-23f314ddd20f.jpg?token=QoD87C85Jh2ZBbsXfrMVyv5QUT5SqpXb_etVxf1v70I&height=555&width=924&expires=33244121362">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="escapinglegacy.com">
+<meta property="twitter:url" content="https://escapinglegacy.com/">
+<meta name="twitter:title" content="Escaping Legacy">
+<meta name="twitter:description" content="Get the book: The Product Owner's Guide To Escaping Legacy">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/9deb8ff0-e7d0-4008-a429-23f314ddd20f.jpg?token=QoD87C85Jh2ZBbsXfrMVyv5QUT5SqpXb_etVxf1v70I&height=555&width=924&expires=33244121362">
+
+     -->
+
   {{ if .Site.Params.sharing_image_large }}
 
     {{ "<!--Sharing image-->" | safeHTML }}
@@ -20,14 +41,14 @@
     <meta property="og:image:height" contents="{{ .Site.Params.sharing_image_large_height | safeHTML }}"/>
   
   {{ end }}
-
+<!-- 
   {{ if .Site.Params.sharing_image_small }}
     {{ "<!--Sharing image-->" | safeHTML }}
     <meta property="og:image" contents="{{ .Site.Params.sharing_image_small | absURL }}"/>
     <meta property="og:image:type" contents="image/jpg"/>
     <meta property="og:image:width" contents="{{ .Site.Params.sharing_image_small_width | safeHTML }}"/>
     <meta property="og:image:height" contents="{{ .Site.Params.sharing_image_small_height | safeHTML }}"/>
-  {{ end }}
+  {{ end }} -->
 
   {{ "<!-- plugins -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
