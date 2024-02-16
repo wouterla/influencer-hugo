@@ -12,11 +12,13 @@
   {{ hugo.Generator }}
 
   {{ if .Site.Params.sharing_image_large }}
+
     {{ "<!--Sharing image-->" | safeHTML }}
     <meta property="og:image" contents="{{ .Site.Params.sharing_image_large | absURL }}"/>
     <meta property="og:image:type" contents="image/jpg"/>
     <meta property="og:image:width" contents="{{ .Site.Params.sharing_image_large_width | safeHTML }}"/>
     <meta property="og:image:height" contents="{{ .Site.Params.sharing_image_large_height | safeHTML }}"/>
+  
   {{ end }}
 
   {{ if .Site.Params.sharing_image_small }}
