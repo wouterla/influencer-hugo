@@ -11,7 +11,7 @@
   <meta name="theme-name" content="influencer-hugo" />
   {{ hugo.Generator }}
 
-  {{ .Site.Params.sharing_image_large }}
+  {{ if .Site.Params.sharing_image_large }}
   {{ "<!--Sharing image-->" | safeHTML }}
   <meta property="og:image" contents="{{ .Site.Params.sharing_image_large | absURL }}"/>
   <meta property="og:image:type" contents="image/jpg"/>
@@ -19,7 +19,7 @@
   <meta property="og:image:height" contents="{{ .Site.Params.sharing_image_large_height | safeHTML }}"/>
   {{ end }}
 
-  {{ .Site.Params.sharing_image_small }}
+  {{ if .Site.Params.sharing_image_small }}
   {{ "<!--Sharing image-->" | safeHTML }}
   <meta property="og:image" contents="{{ .Site.Params.sharing_image_small | absURL }}"/>
   <meta property="og:image:type" contents="image/jpg"/>
