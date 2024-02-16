@@ -12,10 +12,11 @@
   {{ hugo.Generator }}
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="{{ .Site.baseurl }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ .Site.Title }}">
-  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:url" content="{{ .Site.Baseurl }}" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="{{ .Site.Title }}"/>
+  <meta property="og:description" content="{{ .Site.Params.description }}"/>
+
   {{ if .Site.Params.sharing_image_large }}
     {{ "<!--Sharing image-->" | safeHTML }}
     <meta property="og:image" content="{{ .Site.Params.sharing_image_large | absURL }}"/>
@@ -26,11 +27,11 @@
   {{ end }}
 
   <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="{{ .Site.Params.domain | safeHTML }}">
-  <meta property="twitter:url" content="{{ .Site.baseurl }}">
-  <meta name="twitter:title" content="{{ .Site.Title }}">
-  <meta name="twitter:description" content="{{ .Site.Params.description }}">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:domain" content="{{ .Site.Params.domain | safeHTML }}"/>
+  <meta property="twitter:url" content="{{ .Site.baseurl }}"/>
+  <meta name="twitter:title" content="{{ .Site.Title }}"/>
+  <meta name="twitter:description" content="{{ .Site.Params.description }}"/>
 
   {{ "<!-- plugins -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
