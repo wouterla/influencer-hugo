@@ -23,7 +23,8 @@
       </div>
 
       {{ if .image }}
-      <div class="col-lg-5 d-none d-lg-block">
+      <!-- <div class="col-lg-5 d-none d-lg-block"> -->
+      <div class="col-lg-5">
         <div class="banner-img pt-5">
           <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid w-100">
         </div>
