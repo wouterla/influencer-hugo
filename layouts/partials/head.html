@@ -11,6 +11,12 @@
   <meta name="theme-name" content="influencer-hugo" />
   {{ hugo.Generator }}
 
+  {{ "<!--Sharing image-->" | safeHTML }}
+  <meta property="og:image" contents="{{ .Site.Params.logo | absURL }}"/>
+  <meta property="og:image:type" contents="image/jpg"/>
+  <meta property="og:image:width" contents="{{ .Site.Params.logoWidth | safeHTML }}"/>
+  <meta property="og:image:height" contents="{{ .Site.Params.logoHeight | safeHTML }}"/>
+
   {{ "<!-- plugins -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
   <link rel="stylesheet" href="{{ .URL | absURL }} ">
@@ -26,5 +32,6 @@
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ `images/favicon.ico` | absURL }} " type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.ico` | absURL }} " type="image/x-icon">
+
 
 </head>
