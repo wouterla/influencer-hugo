@@ -15,16 +15,15 @@
             <h4>Price: <span class="text-color">{{ .price }}</span></h4>
           </div>          
           <p class="mb-4">{{ .content | markdownify }}</p>
-          <!-- <button class="snipcart-add-item btn btn-main mt-2" ></button> -->
-            {{ if .button.enable }}
-            {{ with .button }}
-            <a href="{{ .link | safeURL }}" class="btn btn-main-2">{{ .label }}</a>
-            {{ end }}
-            {{ end }}
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | safeURL }}" class="btn btn-main-2">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
             <!-- <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
             data-item-name="{{ .title | markdownify }}" data-item-image="{{ .image | absURL }}" data-item-price="{{ .price }}" data-item-url="/">
             {{ .purchase_button_text }}  -->
-            <i class="ti-angle-right ml-3"></i>
+            <!-- <i class="ti-angle-right ml-3"></i> -->
         </button>
         </div>
       </div>
