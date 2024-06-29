@@ -12,7 +12,7 @@
           <h2 class="mb-3 mt-2">{{ .title | markdownify }}</h2>
 
           <div class="mb-4">
-            <h4>Price from: <span class="text-color">{{ .price }}</span></h4>
+            <h4>{{ .price_label }}<span class="text-color">{{ .price }}</span></h4>
           </div>          
           <p class="mb-4">{{ .content | markdownify }}</p>
           {{ if .button.enable }}
