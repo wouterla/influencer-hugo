@@ -335,9 +335,9 @@
 
 <!-- Latest blog -->
 {{ if .Site.Data.homepage.blog.enable }}
-{{ with .Site.Data.homepage.blog }}
 <section class="section blog-home border-top" id="blog">
   <div class="container">
+    {{ with .Site.Data.homepage.blog }}
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="section-heading text-center">
@@ -346,32 +346,16 @@
         </div>
       </div>
     </div>
-
-    {{ if .external }}
-    <div class="row">
-      {{ range .external }}
-      <div class="col-lg-3 col-sm-6">
-        <div class="external-blog-block justify-content-center text-center p-4 mb-4">
-          <a href="{{ .link | safeURL }}" class="hover-item">
-            <h5 class="mb-3">{{ .title | markdownify }}</h5>
-            <img src="{{ .image | relURL }}" alt="" class="img-fluid">
-          </a>
-        </div>
-      </div>
-      {{ end }}
-    </div>
-    {{ else }}
+    {{ end }}
     <div class="row">
       {{ range first 3 (where .Site.RegularPages "Type" "post")}}
       <div class="col-lg-4 col-md-6 col-sm-6">
-      {{ .Render "post" }}
+      {{ .Render "post"}}
       </div>
       {{ end }}
-    </div> 
-    {{ end }}
-    {{ end }}
+    </div>
     <div class="text-center mt-5">
-      <a href="https://lagerweij.com/posts" class="btn btn-main">All Posts</a>
+      <a href="/blog" class="btn btn-main">All Post</a>
     </div>
   </div>
 </section>
